@@ -76,16 +76,14 @@ shift + lctrl + alt - k : chunkc tiling::window --use-insertion-point north
 shift + lctrl + alt - l : chunkc tiling::window --use-insertion-point east
 
 # Restart Chunkwm
-shift + lctrl + alt - r : \
-    brew services restart skhd \
-    brew services restart chunkwm
+shift + lctrl + alt - r : brew services restart chunkwm
 
 # opens apps
 alt - t : open /Applications/Utilities/Terminal.app
-alt - f : open /Applications/Firefox.app
+alt - b : open /Applications/Firefox.app
 alt - c : open /Applications/Visual\ Studio\ Code.app
 alt - v : open /Applications/Macvim.app
 alt - o : open /Applications/Omnifocus.app
 alt - a : open /Applications/Agenda.app
 alt - s : open /Applications/Slack.app
-alt - b : open /System/Library/CoreServices/Finder.app
+alt - f : open /System/Library/CoreServices/Finder.app
