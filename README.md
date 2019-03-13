@@ -8,8 +8,8 @@ See my [dotfiles](https://github.com/joelbrewster/dotfiles.git) repo for my othe
 rm ~/.chunkwmrc
 rm ~/.skhdrc
 git clone https://github.com/joelbrewster/chunkwm-config.git ~/.config/chunkwm
-ln -s ~/Developer/chunkwm-config/chunkwmrc ~/.chunkwmrc
-ln -s ~/Developer/chunkwm-config/skhdrc ~/.skhdrc
+ln -s ~/.config/chunkwm-config/chunkwmrc ~/.chunkwmrc
+ln -s ~/.config/chunkwm-config/skhdrc ~/.skhdrc
 ```
 
 ## Keyboard shortcuts
