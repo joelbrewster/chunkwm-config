@@ -49,13 +49,13 @@ chunkc set mouse_modifier                \"fn\"
 
 chunkc set preselect_border_color        "0xE0${preselect_border_color}"
 chunkc set preselect_border_width        4
-chunkc set preselect_border_radius       6
+chunkc set preselect_border_radius       4
 
 # ====== Border settings =======================
 
 chunkc set focused_border_color          "0xE0${focused_border_color}"
 chunkc set focused_border_width          4
-chunkc set focused_border_radius         6
+chunkc set focused_border_radius         4
 chunkc set focused_border_skip_floating  1
 chunkc set focused_border_skip_monocle   1
 
@@ -72,10 +72,12 @@ chunkc tiling::rule --owner Finder --name Move --state float &
 chunkc tiling::rule --owner Finder --name Info --state float &
 chunkc tiling::rule --owner Finder --name Connect --state float &
 chunkc tiling::rule --owner \"App Store\" --state float &
+chunkc tiling::rule --owner \"IINA\" --state float &
 chunkc tiling::rule --owner \"System Preferences\" --state float &
 chunkc tiling::rule --owner \"Activity Monitor\" --state float &
 chunkc tiling::rule --owner \"1password\" --state float &
 chunkc tiling::rule --owner \"Keka\" --state float &
+chunkc tiling::rule --owner \"Cataclysm\" --state float &
 chunkc tiling::rule --owner \"Stickies\" --state float &
 chunkc tiling::rule --owner \"Calculator\" --state float &
 chunkc tiling::rule --owner \"Dictionary\" --state float &
@@ -84,5 +86,4 @@ chunkc tiling::rule --owner \"cataclysm\" --state float &
 chunkc tiling::rule --owner \"The Unarchiver\" --state float &
 chunkc tiling::rule --owner \"Transmission\" --state float &
 chunkc tiling::rule --owner \"VirtualBox\" --name \"Oracle VM VirtualBox Manager\" --state float &
-chunkc tiling::rule --owner \"snwe\" --state float &
-
+chunkc tiling::rule --owner "Emacs.*" --state tile

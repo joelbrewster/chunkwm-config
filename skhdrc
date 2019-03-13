@@ -2,7 +2,10 @@
 shift + alt - a : chunkc tiling::desktop --layout monocle
 shift + alt - s : chunkc tiling::desktop --layout bsp
 shift + alt - d : chunkc tiling::desktop --layout float
-shift + alt - space : chunkc tiling::window --toggle float
+shift + alt - f : chunkc tiling::window --toggle float
+shift + alt - space : chunkc tiling::window --toggle float;\
+          chunkc tiling::window --grid-layout 4:4:1:1:2:2
+
 
 # Navigation
 alt - h : chunkc tiling::window --focus west
@@ -17,48 +20,39 @@ shift + alt - k : chunkc tiling::window --warp north
 shift + alt - l : chunkc tiling::window --warp east
 
 # Move focus container to workspace
-shift + alt - m : chunkc tiling::window --send-to-desktop $(chunkc get _last_active_desktop) || \
+shift + ctrl - m : chunkc tiling::window --send-to-desktop $(chunkc get _last_active_desktop) || \
                   chunkc tiling::window --send-to-desktop (chunkc get _last_active_desktop)
-shift + alt - p : chunkc tiling::window --send-to-desktop prev
-shift + alt - n : chunkc tiling::window --send-to-desktop next
-shift + alt - 1 : chunkc tiling::window --send-to-desktop 1
-shift + alt - 2 : chunkc tiling::window --send-to-desktop 2
-shift + alt - 3 : chunkc tiling::window --send-to-desktop 3
-shift + alt - 4 : chunkc tiling::window --send-to-desktop 4
-shift + alt - 5 : chunkc tiling::window --send-to-desktop 5
-shift + alt - 6 : chunkc tiling::window --send-to-desktop 6
+ctrl + alt - p : chunkc tiling::window --send-to-desktop prev
+ctrl + alt - n : chunkc tiling::window --send-to-desktop next
+ctrl + alt - 1 : chunkc tiling::window --send-to-desktop 1
+ctrl + alt - 2 : chunkc tiling::window --send-to-desktop 2
+ctrl + alt - 3 : chunkc tiling::window --send-to-desktop 3
+ctrl + alt - 4 : chunkc tiling::window --send-to-desktop 4
+ctrl + alt - 5 : chunkc tiling::window --send-to-desktop 5
+ctrl + alt - 6 : chunkc tiling::window --send-to-desktop 6
 
 # Resize windows
-lctrl + alt - h : \
+ctrl + alt - h : \
     chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge west; \
     chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge east
 
-lctrl + alt - j : \
+ctrl + alt - j : \
     chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge south; \
     chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge north
 
-lctrl + alt - k : \
+ctrl + alt - k : \
     chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge north; \
     chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge south
 
-lctrl + alt - l : \
+ctrl + alt - l : \
     chunkc tiling::window --use-temporary-ratio 0.05 --adjust-window-edge east; \
     chunkc tiling::window --use-temporary-ratio -0.05 --adjust-window-edge west
 
-# Float and center window
-shift + alt - c : \
-    if (("$(chunkc tiling::query --window float)" == 0)); then \
-        chunkc tiling::window --toggle float; \
-        chunkc tiling::window --grid-layout 6:6:1:1:4:4; \
-    else \
-        chunkc tiling::window --toggle float; \
-    fi
-
 # Equalize size of windows
-lctrl + alt - 0 : chunkc tiling::desktop --equalize
+ctrl + alt - 0 : chunkc tiling::desktop --equalize
 
 # Enable / Disable gaps in current workspace
-lctrl + alt - g : chunkc tiling::desktop --toggle offset
+ctrl + alt - g : chunkc tiling::desktop --toggle offset
 
 # Rotate windows clockwise and anticlockwise
 alt - r         : chunkc tiling::desktop --rotate 90
@@ -69,21 +63,23 @@ shift + alt - x : chunkc tiling::desktop --mirror horizontal
 shift + alt - y : chunkc tiling::desktop --mirror vertical
 
 # Set insertion point for focused container
-shift + lctrl + alt - x : chunkc tiling::window --use-insertion-point cancel
-shift + lctrl + alt - h : chunkc tiling::window --use-insertion-point west
-shift + lctrl + alt - j : chunkc tiling::window --use-insertion-point south
-shift + lctrl + alt - k : chunkc tiling::window --use-insertion-point north
-shift + lctrl + alt - l : chunkc tiling::window --use-insertion-point east
+shift + ctrl + alt - x : chunkc tiling::window --use-insertion-point cancel
+shift + ctrl + alt - h : chunkc tiling::window --use-insertion-point west
+shift + ctrl + alt - j : chunkc tiling::window --use-insertion-point south
+shift + ctrl + alt - k : chunkc tiling::window --use-insertion-point north
+shift + ctrl + alt - l : chunkc tiling::window --use-insertion-point east
 
 # Restart Chunkwm
-shift + lctrl + alt - r : brew services restart chunkwm
+shift + ctrl + alt - r : brew services restart chunkwm
 
 # opens apps
-alt - t : open /Applications/Utilities/Terminal.app
+alt - return : ~/.config/chunkwm/scripts/iterm.sh
+alt - t : open /Applications/iterm.app
+alt - e : open /Applications/Emacs.app
+alt - m : open /Applications/IINA.app
 alt - b : open /Applications/Firefox.app
 alt - c : open /Applications/Visual\ Studio\ Code.app
 alt - v : open /Applications/Macvim.app
-alt - o : open /Applications/Omnifocus.app
 alt - a : open /Applications/Agenda.app
 alt - s : open /Applications/Slack.app
 alt - f : open /System/Library/CoreServices/Finder.app
