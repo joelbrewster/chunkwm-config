@@ -2,14 +2,14 @@
 
 # ====== Variables =============================
 
-gaps_top="8"
+gaps_top="36"
 gaps_bottom="8"
 gaps_left="8"
 gaps_right="8"
 gaps_inner="8"
 
-focused_border_color="A788F6"
-preselect_border_color="A788F6"
+focused_border_color="bd93f9"
+preselect_border_color="ff79c6"
 
 # ====== Core settings =========================
 
