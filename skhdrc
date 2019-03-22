@@ -72,6 +72,10 @@ shift + ctrl + alt - l : chunkc tiling::window --use-insertion-point east
 # Restart Chunkwm
 shift + ctrl + alt - r : brew services restart chunkwm && brew services restart skhd
 
+# mission control with desktops expanded
+# ctrl - return : /Applications/missionControlFullDesktopBar.app/Contents/MacOS/missionControlFullDesktopBar -d -i
+alt - tab : ~/.config/chunkwm/scripts/missionControlFullDesktopBar -d -i
+
 # opens apps
 alt - return : ~/.config/chunkwm/scripts/iterm.sh
 alt - t : open /Applications/iterm.app

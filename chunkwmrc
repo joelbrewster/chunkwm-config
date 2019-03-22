@@ -8,8 +8,9 @@ gaps_left="8"
 gaps_right="8"
 gaps_inner="8"
 
-focused_border_color="467DCC"
-preselect_border_color="52AAF1"
+# Dracula theme
+focused_border_color="bd93f9"
+preselect_border_color="ff79c6"
 
 # ====== Core settings =========================
 
