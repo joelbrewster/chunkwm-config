@@ -2,11 +2,11 @@
 
 # ====== Variables =============================
 
-gaps_top="8"
-gaps_bottom="8"
-gaps_left="8"
-gaps_right="8"
-gaps_inner="8"
+gaps_top="12"
+gaps_bottom="12"
+gaps_left="12"
+gaps_right="12"
+gaps_inner="12"
 
 # Dracula theme
 focused_border_color="bd93f9"
