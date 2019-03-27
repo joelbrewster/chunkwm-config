@@ -78,12 +78,12 @@ alt - tab : ~/.config/chunkwm/scripts/missionControlFullDesktopBar -d -i
 
 # opens apps
 alt - return : ~/.config/chunkwm/scripts/iterm.sh
-alt - t : open /Applications/iterm.app
-alt - e : open /Applications/Emacs.app
-alt - m : open /Applications/IINA.app
-alt - b : open /Applications/Firefox.app
-alt - c : open /Applications/Visual\ Studio\ Code.app
-alt - v : open /Applications/Macvim.app
-alt - a : open /Applications/Agenda.app
+alt - f : osascript ~/.config/chunkwm/scripts/firefox.scpt
+alt - c : osascript ~/.config/chunkwm/scripts/vscode.scpt
+alt - b : osascript ~/.config/chunkwm/scripts/finder.scpt
+alt - e : open -n /Applications/Emacs.app
+alt - v : open -n /Applications/Macvim.app
 alt - s : open /Applications/Slack.app
-alt - f : open /System/Library/CoreServices/Finder.app
+alt - m : open /Applications/IINA.app
+alt - t : open /Applications/iterm.app
+
