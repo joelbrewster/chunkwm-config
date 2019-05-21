@@ -77,13 +77,5 @@ shift + ctrl + alt - r : brew services restart chunkwm && brew services restart 
 alt - tab : ~/.config/chunkwm/scripts/missionControlFullDesktopBar -d -i
 
 # opens apps
-alt - return : osascript ~/.config/chunkwm/scripts/terminal.scpt
-alt + shift - return : open -n /Applications/Emacs.app
-alt - b : osascript ~/.config/chunkwm/scripts/firefox.scpt
-alt - c : osascript ~/.config/chunkwm/scripts/vscode.scpt
-alt - f : osascript ~/.config/chunkwm/scripts/finder.scpt
-alt - e : open -n /Applications/Emacs.app
-alt - v : open -n /Applications/Macvim.app
-alt - s : open /Applications/Slack.app
-alt - m : open /Applications/IINA.app
-
+ctrl - return : open /Applications/Emacs.app
+ctrl + shift - return : open /Applications/Firefox.app
